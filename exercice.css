@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: tahoma, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.forme {
+    border: 2px solid blue;
+    width: 30%;
+    margin: 0 auto;
+}
+
+h2 {
+    background: blue;
+    border-bottom: 2px solid blue;
+    color: white;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.rouge {
+    background: red;
+    border-bottom: 2px solid red;
+    color: white;
+}
+
+.modif {
+    border: 2px solid red;
+}

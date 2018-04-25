@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* le style s'applique à la page courante */
+
+        h1 {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container ">
+        <h1>Cascading Stylesheet - CSS</h1>
+
+        <!-- 1 on évite de mettre l'attribut style mais en cascade on modifie à un niveau différent la couleur ici par exemple -->
+        <h1 style="color:royalblue ">Cascading Stylesheet - CSS</h1>
+
+        <h1 id="main-title ">Hello</h1>
+
+        <!-- la class compose à la carte par exemple une class pour les couleurs, une pour les marges, pour la taille etc. si deux classes possède une information différente à appliquer, la dernière spécifiée écrase la n-1 -->
+
+        <p class="article-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi culpa ducimus ullam voluptas assumenda explicabo
+            exercitationem ipsum repellendus aperiam facilis?</p>
+
+        <p class="article-text article-border ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi culpa ducimus ullam voluptas assumenda explicabo
+            exercitationem ipsum repellendus aperiam facilis?</p>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sint.</div>
+
+        <div class="marges">
+
+            <a href="#">Click Me</a>
+
+            <a href="#" class="btn">Mon bouton</a>
+
+            <a href="#" class="btn btn-green">Mon bouton</a>
+            <a href="#" class="btn btn-blue">Mon bouton</a>
+            <a href="#" class="btn btn-orange">Mon bouton</a>
+
+            <button class="btn btn-blue">Save</button>
+            <input type="submit" class="btn btn-blue">
+
+            <div class="btn btn-green">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, animi.</div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

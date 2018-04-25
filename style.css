@@ -1,0 +1,104 @@
+/* il y a une marge par defaut sur la page, pour la supprimer: */
+body {
+    margin:0;
+    font-family: tahoma, Helvetica, sans-serif;
+}
+
+a {
+    color: crimson;
+    /* retirer le soulignement */
+    text-decoration: none;
+}
+/* pseudo class a:hover permet de changer l'apparence quand on survole un element */
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    /* margin: a b c d , a pour le haut puis b pour droite c pour bas et d pour gauche) */
+
+}
+
+
+/* #main-title fait référence à main-title l'id, attention, l'id est toujours plus fort en cascade*/
+#main-title {
+    color:teal;
+}
+
+h1 {
+    /* font-family: definit un set de police, on définit plusieurs polices au cas ou le navigateur ne pourrait pas en lire une */
+    /* font-family: Arial, Helvetica, sans-serif; */
+   
+    color: yellowgreen;
+    /* taille de la police font-size navigateur par défaut = 16px */
+    font-size: 20px;
+    border-width: 2px;
+    border-style: solid;
+    /* padding=marge interne des bordures */
+    padding: 5px;
+    
+    /* margin=marge externe */
+
+}
+
+    /* selecteur qui ne porte pas le nom de la balise */
+
+/* la classe commence par un point */
+.article-text {
+    color: #333
+}
+
+.article-border {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+
+.btn {
+    /* text-align: center pour centrer les éléments inline */
+    /* display change le comportement*/
+    display: inline-block;
+    color: black;
+    background-color: rgb(177, 180, 184);
+    padding: 7px;
+    border-style: none;
+    border-radius:5px;
+    cursor: pointer;
+    /* cursor: pointer; pour faire apparaître la main */
+    font-size: inherit;
+    /* inherit permet d'obtenir la taille du parent mais pour d'autre éléments aussi*/
+    transition: opacity 0.5s linear;
+    /* permet d'appliquer une transition sur l'opacité avec temps et effet de transition  on peut écrire .5 pour 0.5*/
+}
+/* on applique à plusieurs classes en même temps grace à une virgule */
+.btn-green,
+.btn-blue,
+.btn-orange {
+    color: white;
+    }
+
+.btn-green {
+    background-color: seagreen;
+}
+
+.btn-blue {
+    background-color: royalblue;
+}
+
+.btn-orange {
+    background: orangered;
+}
+
+.btn:hover {
+    /* opacity: 0.8; crée une opacité à 80% */
+    opacity: 0.9;
+    text-decoration: none;
+
+}
+
+.marges {
+    margin: 10px 0;
+    /* margin: 10px 0; la première valeur pour en haut et en bas, la seconde pour gauche et droite */
+}
