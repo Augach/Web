@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaires HTML</title>
+</head>
+
+<body>
+
+    <form action="form.html" method="POST">
+        <div>
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" id="firstname" placeholder="John">
+        </div>
+        <div>
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Doe" value="Smith">
+        </div>
+        <!-- div>label{Email}+input[name=email id=email placeholder=example@xyz.com] -->
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="example@xyz.com">
+        </div>
+
+        <div>
+            <label for="birthdate">Date de naissance</label>
+            <input type="date" name "birthdate" id="birthdate" placeholder="01/01/1970">
+        </div>
+        <!-- attention a la balise fin textarea qui doit être en fin de ligne collée  -->
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Raconte moi ta vie..."></textarea>
+        </div>
+
+        <!-- attention ici on peut selectionner les deux champs -->
+        <div>
+            <label>
+                <input type="radio"> Madame
+            </label>
+            <label>
+                <input type="radio"> Monsieur
+            </label>
+
+        </div>
+        <!-- en ajoutant name et value on ne peut en selectionner qu'un soit Madma soit monsieur -->
+        <div>
+            <label>
+                <input type="radio" name="gender" value="F"> Madame
+            </label>
+            <label>
+                <input type="radio" name="gender" value="H"> Monsieur
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name"inscription newsletter"> Inscription newsletter
+            </label>
+            <label>
+                <input type="checkbox" name"cgv" checked> CGV
+                <!-- checked pour cocher par défaut -->
+            </label>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+        </div>
+       
+        <!-- menu déroulant -->
+        <div>
+            <label for="countries">Pays</label>
+            <select name"countries" id="countries">
+                <option value="1">France</option>
+                <option value="2">Espagne</option>
+            </select>
+        </div>
+        
+        <!-- valider un formulaire -->
+        <!-- en deux façons -->
+
+        <div>
+            <input type="submit" value="Envoyer">
+            <button type="submit">Envoyer</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
