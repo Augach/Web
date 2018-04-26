@@ -1,0 +1,41 @@
+.flex-container {
+    width: 880px;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid #666;
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* align-items: flex-end; */
+    flex-direction: row;
+    /* flex-direction: raw; par defaut */
+}
+
+.flex-square {
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 2px solid rgb(159, 159, 163);
+    color: white;
+}
+
+.flex-square-blue {
+    background: indigo;
+}
+
+.flex-square-violet {
+    background: rgb(148, 24, 131);
+    flex-grow: 1;
+    /* flex-grow: 1;prend l'espace restant par rapport à l'espace disponible */
+}
+
+.flex-square-yellow {
+    background: rgb(199, 189, 45);
+}
+
+.flex-square-pink {
+    background: rgb(236, 49, 180);
+}
+.flex-square-green {
+    background: rgb(45, 158, 64);
+    flex-grow: 2;
+}

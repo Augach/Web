@@ -1,12 +1,41 @@
 body {
-    font: 16px Tahoma, Arial, sans-serif;
+    /* font: 16px Tahoma, Arial, sans-serif; */
+    font: 1.125em Tahoma, Arial, sans-serif;
+    /* font: 1em est une unité utilisée de façon à garder les proportions, pour les zooms par exemple.
+    1em correspond à 16px. Cette unité relative permet aussi de s'adapter aux préférences du navigateur. L'utilisateur peut modifier la taille 16px par défaut pour son navigateur 
+    1em=16px
+    attention c'est relatif au parent le plus proche
+    si je modifie une taille plus bas elle sera multipliée par 1.125 ici
+    pour éviter le cumul, on ajoute un r : ex, font-size: 1rem;*/
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* .clearfix { */
+    /* clear: left; */
+    /* clear: both; */
+    /* clear: both pour left et right */
+/* } */
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    overflow: auto;
+    zoom: 1;
+    display: table;
+    height: 0;
+    tous les elements écrits sont nécessaires pour que le clearfix fonctionne dans tous les navigateurs
 }
 
 .box {
-    border: 1px solid #CCCCCC;
+    border: 0.125px solid #CCCCCC;
     margin-bottom: 20px;
     transition: box-shadow 0.4s ease;
     /* ease est un effet prédéfini, pour le personnaliser on utilise cubic-bezier (a,b,c,d) voir sur le site */
+    position: relative;
 }
 
 .box:hover {
@@ -14,13 +43,15 @@ body {
 }
 
 .box-red {
-    border-color: red;
+    border-color: #ff0000;
 }
 
 /* .box-red .box-title selectionne le box title dans le box red, on selectionne l'enfant du bloc box-red , ils sont séparés par un espace
 si on met une virgule entre les deux, on sélectionne les deux*/
 .box-red .box-title {
     background-color: red;
+    /* background-color:rgba(red, green, blue, alpha); pour la transparence*/
+
     color: white;
 }
 
@@ -32,6 +63,28 @@ si on met une virgule entre les deux, on sélectionne les deux*/
     background-color: royalblue;
     color: white;
 }
+.box-autor {
+    position: absolute;
+    /* position: absolute; il faut ajouter la position relative au bloc pour associer l'image au bloc */
+    top: -8px;
+    right: 25px;
+}
+
+.box-autor img {
+    width: 50px;
+}
+
+.box-autor-name {
+    position: absolute;
+    top: 35px;
+    right: 23px;
+    background: rgb(82, 77, 77);
+    color: white;
+    font-size: 10px;
+    padding:  2px;
+    z-index: 0;
+     /* z-index: 0; affiche l'élément dans l'ordre des balises. Si je mets 1 par exemple cet element passe en seconde position d'affiche, on le force) */
+}
 
 .box-title {
     margin: 0;
@@ -42,7 +95,34 @@ si on met une virgule entre les deux, on sélectionne les deux*/
     font-size: 20px;
 }
 
+.box-img {
+    float: left;
+    /* float: left; attention float doit être arrêté à un moment donné sinon tout le reste se met en float dans le reste de la page. on utilise clear */
+}
+
 .box-content {
     padding: 10px;
+    line-height: 22px;
+    /* line-height: 22px; joue sur l'espace entre les lignes */
 
+    /* Fond d'écran du block" */
+    /* background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.top-page {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.top-page img {
+    width: 40px;
+    opacity: 0.3;
+    transition: opacity 0,4s ease;
+}
+
+.top-page img:hover {
+    opacity: 1;
 }
