@@ -1,0 +1,48 @@
+body {
+    font: 16px Tahoma, Arial, sans-serif;
+}
+
+.box {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+    transition: box-shadow 0.4s ease;
+    /* ease est un effet prédéfini, pour le personnaliser on utilise cubic-bezier (a,b,c,d) voir sur le site */
+}
+
+.box:hover {
+    box-shadow: 1px 1px 5px #CCCCCC;
+}
+
+.box-red {
+    border-color: red;
+}
+
+/* .box-red .box-title selectionne le box title dans le box red, on selectionne l'enfant du bloc box-red , ils sont séparés par un espace
+si on met une virgule entre les deux, on sélectionne les deux*/
+.box-red .box-title {
+    background-color: red;
+    color: white;
+}
+
+.box-blue {
+    border-color: royalblue;
+}
+
+.box-blue .box-title {
+    background-color: royalblue;
+    color: white;
+}
+
+.box-title {
+    margin: 0;
+    border-bottom: inherit;
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid; */
+    padding: 8px;
+    font-size: 20px;
+}
+
+.box-content {
+    padding: 10px;
+
+}
