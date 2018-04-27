@@ -21,6 +21,10 @@ a {
      color: #fff;
      line-height: 45px;
      display: flex;
+     position: fixed;
+     z-index: 999;
+     right: 0;
+     left: 0;
  }
 
  .navbar a {
@@ -45,9 +49,133 @@ a {
      height: 300px;
      background-repeat: no-repeat;
      color: #fff;
+     position: relative;
+     line-height: 300px;
+     overflow: hidden;
+     /* overflow: hidden; cache mon nuage en sortie de block */
      
  }
 
  .sky-title {
+     position: relative;
+     font-size: 2em;
+     z-index: 4;
+     text-shadow: 2px 2px 4px royalblue;
      margin: 0;
+     margin-left: 50px;
+     
  }
+
+ .sky-cloud1 {
+     position: absolute;
+     top: 30px;
+     left:20px;
+     width: 200px;
+     animation-name: cloudmoveX;
+     animation-duration: 60s;
+     animation-timing-function: linear;
+     animation-fill-mode: both;
+     /* animation-fill-mode: both; pour forwards + backwards */
+     animation-iteration-count: infinite;
+     /* on peut aussi utiliser animation
+     animation: name duration timing-function delay iteration-count direction fill-mode; */
+     /* animation: cloudmoveX 60s linear 0 infinite normal both; */
+   
+ }
+
+ .sky-cloud2 {
+    position: absolute;
+    left: 10px;
+    top: 130px;
+    animation-name: cloudmoveX;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+
+/* animation que l'on va pouvoir attibuer aux différentes classes */
+@keyframes cloudmoveX {
+    from {
+        transform: translateX(-300px);
+        /* -500 permet de sortir mon nuage à gauche */
+    }
+    to {
+        transform: translateX(400px);
+        /* idem je sors mon nuage à droite */
+    }
+}
+
+.container {
+    background-color: #F0F0F0;
+    padding: 10px;
+}
+
+.content article {
+    padding: 10px;
+    border: 1px solid #CCC;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.content article:last-child {
+    margin: 0;
+}
+
+/* .content article::last-child {
+    margin: 0;
+} 
+on selectionne le dernier élément enfant dans le content pour le modifier ici article 2*/
+
+aside.sidebar {
+    background: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+/* aside.sidebar { si on ne met pas d'espace avant le point cela devient une condition: on selectionne/modifie sidebar uniquement si il est contenu dans aside) */
+
+.menu a {
+    display: block;
+}
+
+.footer {
+    background-color: rgb(39, 33, 88);
+    color: #F0F0F0;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .content {
+        flex-basis: 70%;
+        order: 1;
+        /* à tester  order: 1; */
+    }
+
+    aside.sidebar {
+        margin-top: 0;
+        flex-basis: 27%;
+    }
+
+    .footer {
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .associate,
+    .network,
+    .newsletter {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
